@@ -72,6 +72,16 @@ public class MainActivity extends AppCompatActivity {
                                  binding.wind.setText("  " + String.format("%.2f", mresponse.getWind().getSpeed() * 1.58) + " " + " km/hr ");
 
                                  binding.humid.setText(" " + mresponse.getMain().getHumidity() + " ");
+                                 Long rise = Long.valueOf(mresponse.getSys().getSunrise());
+
+                                 String sunrise = new SimpleDateFormat("hh:mm a", Locale.ENGLISH).format(new Date(rise * 1000));
+                                 binding.sunrise.setText(sunrise);
+
+                                 Long set = Long.valueOf(mresponse.getSys().getSunset());
+
+                                 String sunset = new SimpleDateFormat("hh:mm a", Locale.ENGLISH).format(new Date(set * 1000));
+
+                                 binding.sunset.setText(sunset);
 
                                  binding.moreDetails.setOnClickListener(new View.OnClickListener() {
                                      @Override
