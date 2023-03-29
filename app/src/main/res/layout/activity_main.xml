@@ -52,6 +52,7 @@
 
 
             <ImageView
+                android:id="@+id/forecastImg"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/clouds"
@@ -69,7 +70,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="20dp"
-            android:text="28"
+            android:text=""
             android:textColor="@color/white"
             android:fontFamily="sans-serif-black"
             android:textSize="40sp"

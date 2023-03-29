@@ -82,6 +82,13 @@ public class MainActivity extends AppCompatActivity {
                                  String sunset = new SimpleDateFormat("hh:mm a", Locale.ENGLISH).format(new Date(set * 1000));
 
                                  binding.sunset.setText(sunset);
+                                 String fimg=String.valueOf(mresponse.getWeather().get(0).getMain());
+                                 if(fimg.equals("Thunderstorm")){
+                                     binding.forecastImg.setImageResource(R.drawable.thunderstorm);
+                                 }
+
+
+
 
                                  binding.moreDetails.setOnClickListener(new View.OnClickListener() {
                                      @Override
